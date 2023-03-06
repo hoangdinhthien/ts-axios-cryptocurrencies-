@@ -15,7 +15,7 @@ export default function CryptoSummary({
         console.log(crypto.name, amount, crypto.current_price * amount);
     });
 
-    const [amount, setAmount] = useState<number>(0);
+    const [amount, setAmount] = useState<number>(NaN);
     return (
         <div>
             <span>{crypto.name + ':  ' + crypto.current_price + ' vnd'}</span>
@@ -38,7 +38,8 @@ export default function CryptoSummary({
                               minimumFractionDigits: 2,
                               maximumFractionDigits: 2,
                           }
-                      )}{' '}
+                      )}
+                {'  '}
                 vnd
             </p>
         </div>
